@@ -25,7 +25,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <div style="display: flex;">
-                        <img src="storage/static/logo.png"
+                        <img src="{{url('/storage/static/logo.png')}}"
                              style="max-height: 50px;
                              max-width: 30px; padding-right: 6px;">
 
