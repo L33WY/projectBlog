@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->string('language');
             $table->text('description');
             $table->boolean('solved')->default(false);
+            $table->string('image')->default('defaultImg.jpg');
 
 
             $table->timestamps();
