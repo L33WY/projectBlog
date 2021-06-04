@@ -20,6 +20,7 @@ class CreateProfilesTable extends Migration
             $table->string('company')->nullable();
             $table->text('description')->nullable();
             $table->string('url')->nullable();
+            $table->string('image')->default('/storage/defaultProfileImg.jpg');
 
             $table->timestamps();
             $table->index('user_id');

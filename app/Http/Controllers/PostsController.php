@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Post;
 
 class PostsController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+//    public function __construct()
+//    {
+//        $this->middleware('auth');
+//    }
 
     public function create()
     {
@@ -57,5 +58,12 @@ class PostsController extends Controller
 
         return redirect('/profile/' . auth()->user()->id);
 
+    }
+
+
+    public function show(Post $post)
+    {
+        $postDate = $post->created_at->format('Y-m-d');
+        return view('posts/show', compact('post', 'postDate'));
     }
 }
