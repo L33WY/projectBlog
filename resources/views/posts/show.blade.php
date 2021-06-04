@@ -46,5 +46,24 @@
             <div></div>
         </div>
     </div>
+
+{{--  Comment section  --}}
+    <div><h2 class="pt-4">Comments: </h2></div>
+
+    <div><h4><a style="color:#3490dc;" href="#">Add new comment</a></h4></div>
+
+    <div class="row" style="border: 4px solid green">
+        <div class="col-12">
+            <div class="d-flex justify-content-between p-1">
+                <div><h2>Posted by: <a style="color:#3490dc;" href="#">User</a></h2></div>
+                <div><h3>Added at: 25:07:05</h3></div>
+            </div>
+            <div><h4>Description: </h4></div>
+            <div>
+                <p>Lorem Lorem Lorem Lorem vLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem Lorem Lorem Lorem vLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem</p>
+            </div>
+        </div>
+    </div>
+
 </div>
 @endsection
