@@ -11,7 +11,17 @@
         </div>
 
         <div class="col-5">
-            <div class="pt-2 font-weight-bold"><h2>Title: <span style="color: green">{{ $post->title }}</span></h2></div>
+            <div class="d-flex justify-content-between">
+                <div class="pt-2 font-weight-bold"><h2>Title: <span style="color: green">{{ $post->title }}</span></h2></div>
+                @can('update', $post->user->profile)
+                    <form action="/post/{{ $post->id }}" method="post">
+                        @method('delete')
+                        @csrf
+                        <input type="submit" value="Delete" style="color: red">
+                    </form>
+{{--                    <div style="color: red"><h4><a href="/post/{{ $post->id }}">Delete</a></h4></div>--}}
+                @endcan
+            </div>
 
             <hr>
 

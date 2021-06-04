@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/post/create', [App\Http\Controllers\PostsController::class, 'create']);
+Route::delete('/post/{post}', [App\Http\Controllers\PostsController::class, 'destroy']);
 Route::get('/post/{post}', [App\Http\Controllers\PostsController::class, 'show']);
 Route::post('/post', [App\Http\Controllers\PostsController::class, 'store']);
 

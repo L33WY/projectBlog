@@ -66,4 +66,13 @@ class PostsController extends Controller
         $postDate = $post->created_at->format('Y-m-d');
         return view('posts/show', compact('post', 'postDate'));
     }
+
+    public function destroy(Post $post)
+    {
+        $this->authorize('update', $post->user->profile);
+
+        $post->delete();
+
+        return redirect('/profile/' . auth()->user()->id);
+    }
 }
