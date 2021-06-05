@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'show']);
 Route::get('/', [App\Http\Controllers\HomeController::class, 'show']);
+
 
 
 Auth::routes();
