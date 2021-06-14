@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentsController extends Controller
 {
+        public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function create(Post $post)
     {
         return view('comments/create', compact('post'));
@@ -16,6 +22,7 @@ class CommentsController extends Controller
 
     public function store()
     {
+
         $data = request()->validate([
            'description' => 'required|max:200',
             'post_id' => ''
